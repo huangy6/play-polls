@@ -1,0 +1,9 @@
+2014-01-18 16:47:01,879 - [INFO] - from play in pool-10-thread-4 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2014-01-18 16:47:56,014 - [INFO] - from play in run-main 
+database [default] connected at jdbc:h2:./play-polls
+
+2014-01-18 16:47:56,341 - [INFO] - from play in run-main 
+Application started (Dev)
+

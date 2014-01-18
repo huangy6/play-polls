@@ -1,0 +1,34 @@
+val createStmt = 
+    """CREATE TABLE polls (
+      |  id BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+      |  pollName VARCHAR(100),
+      |  userID BIGINT
+      |  FOREIGN KEY (userID) REFERENCES users (id)
+    )""".stripMargin
+
+val insertStmt = 
+    "INSERT INTO polls (pollName, userID) VALUES ({pollName}, {userID})"
+
+
+val createStmt = 
+    """CREATE TABLE questions (
+      |  id BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+      |  text VARCHAR(500) NOT NULL,
+      |  pollID BIGINT
+      |  FOREIGN KEY (pollID) REFERENCES polls (userID)
+    )""".stripMargin
+
+val insertStmt = 
+    "INSERT INTO questions (text, pollID) VALUES ({text}, {pollID})"
+
+
+val createStmt = 
+    """CREATE TABLE answers (
+      |  id BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+      |  statement VARCHAR(100) NOT NULL,
+      |  questionID BIGINT5
+      |  FOREIGN KEY (questionID) REFERENCES questions (pollID)
+    )""".stripMargin
+
+val insertStmt = 
+    "INSERT INTO answers (statement, questionID) VALUES ({statment}, {questionID})"

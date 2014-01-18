@@ -1,0 +1,158 @@
+.main	{width: 1024px;
+		margin-left: auto;
+		margin-right: auto;
+}
+
+.header	{text-align: center;
+		font-family: Ubuntu Bold, Sans-Serif;
+		font-size: 36px;
+}
+
+.header p	{margin-top: -4px;
+			color: red;
+}
+
+.nav	{margin-top: -20px;
+		width: 100%;
+}
+
+.nav a	{font-family: Ubuntu Bold, Sans-Serif;
+		color: black;
+		text-decoration: none;
+}
+
+.nav a:hover	{color: red;
+}
+
+.nav table	{margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+			text-align: center;
+}
+
+.nav td	{width: 25%;
+}
+
+.title	{font-family: Ubuntu Bold, Sans-Serif;
+		font-size: 24px;
+		color: red;
+}
+
+.content, .stats-content	{margin-top: 25px;
+}
+
+.content, .stats-content, .index-content h1	{font-size: 22px;
+											font-family: Ubuntu;
+											color: red;
+											text-align: center;
+}
+
+.index-content	{font-family: Ubuntu Bold, Sans-Serif;
+				text-decoration: none;
+}
+
+.index-content table	{margin-left: auto;
+					margin-right: auto;
+					text-align: center;
+}
+
+.index-content td	{border: solid white 1px;
+}
+
+.index-content a	{font-family: Ubuntu Bold, Sans-Serif;
+				text-decoration: none;
+}
+
+.content table	{margin-left: auto;
+				margin-right: auto;
+				width: 40%;
+}
+
+.content td, .content table	{border: solid black 1px;
+							border-collapse: collapse;
+}
+
+.content td	{height: 30px;
+			width: 50%;
+}
+
+.content a	{font-family: Ubuntu Bold, Sans-Serif;
+			text-decoration: none;
+}
+
+.stats-content table	{margin-left: auto;
+					margin-right: auto;
+					width: 50%;
+					margin-bottom: 30px;
+}
+
+.stats-content td, .stats-content table	{border: solid black 1px;
+										border-collapse: collapse;
+}
+
+.stats-content td	{height: 30px;
+					width: 25%;
+}
+
+.stats-content a	{font-family: Ubuntu Bold, Sans-Serif;
+				text-decoration: none;
+}
+
+#red a	{color: red;
+}
+
+#red:hover	{border: solid red 1px;
+}
+
+#blue a	{color: blue;
+}
+
+#blue:hover	{border: solid blue 1px;
+}
+
+#green a	{color: green;
+}
+
+#green:hover	{border: solid green 1px;
+}
+
+#purple a	{color: purple;
+}
+
+#purple:hover	{border: solid purple 1px;
+}
+
+#poll-head1	{background-color: red;
+			color: white;
+			font-family: Ubuntu Bold, Sans-Serif;
+			font-size: 22px;
+			text-align: center;
+}
+
+#poll-head2	{background-color: blue;
+			color: white;
+			font-family: Ubuntu Bold, Sans-Serif;
+			font-size: 22px;
+			text-align: center;
+}
+
+#poll-head3	{background-color: green;
+			color: white;
+			font-family: Ubuntu Bold, Sans-Serif;
+			font-size: 22px;
+			text-align: center;
+}
+
+#poll-head4	{background-color: purple;
+			color: white;
+			font-family: Ubuntu Bold, Sans-Serif;
+			font-size: 22px;
+			text-align: center;
+}
+
+.center	{text-align: center;
+}
+
+.boldcent	{font-weight: bold;
+			text-align: center;
+}

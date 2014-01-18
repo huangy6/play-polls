@@ -1,0 +1,75 @@
+@(message: String)(implicit req: Request[_])
+
+@import play.api.mvc._
+
+@main(message) {
+
+	<h3>Survey Says...This is your Poll application.</h3>
+	<br/>
+    @message
+    <br/>
+    
+    @req.session.get("user") match { 
+      case Some(_) => {
+        <form method="post" action="/logout">
+          <button type="submit" class="btn">Logout</button>
+        </form>
+      } 
+      case None => { 
+        <form method="get" action="/login">
+          <button type="submit" class="btn">Login</button>
+        </form>
+      }
+    }
+	
+} 
+
+@*
+@(message: String, polls: List[db.Polls])(implicit req: Request[_])
+
+@import play.api.mvc._
+@import db._
+
+@main(message, polls)
+
+@pollsIter = (0 to (polls.length / 4) map ((i: Int) => polls.slice(4*i, 4*i + 4)))
+
+<head>
+<title>Polls</title>
+<link href="styles.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div class="main">
+  <div class="header">
+    <img src="images/question.jpg" />
+    <p>@message</p>
+  </div>
+
+  <div class="nav">
+    <hr />
+    <table>
+      <tr>
+        <td><a href="index.html">Home</a></td>
+        <td><a href="stats.html">Statistics</a></td>
+      </tr>
+    </table>
+    <hr />
+    
+  </div>
+  <div class="index-content">
+  <h1>Hello World! Please Select a Poll Below</h1>
+  <table style="border: none;">
+    @foreach(poll -> pollsIter) {
+    <tr>
+      <td id="red"><a href="@{poll(1).id + ".html"}"><img src="images/option1.jpg" /></a><br /><a href="@{poll(1).id + ".html"}">@poll(1).name</a></td>
+      <td id="blue"><a href="@{poll(2).id + ".html"}"><img src="images/option2.jpg" /></a><br /><a href="@{poll(2).id + ".html"}">@poll(2).name</a></td>
+      <td id="green"><a href="@{poll(3).id + ".html"}"><img src="images/option3.jpg" /></a><br /><a href="@{poll(3).id + ".html"}">@poll(3).name</a></td>
+      <td id="purple"><a href="@{poll(4).id + ".html"}"><img src="images/option4.jpg" /></a><br /><a href="@{poll(4).id + ".html"}">@poll(4).name</a></td>
+    </tr>
+    }
+  </table>
+  </div>
+</div>
+</body>
+*@
