@@ -5,7 +5,7 @@ import play.api.db.DB
 import play.api.Play.current
 
 // use a case class to model the stuff you save in a table
-case class Answers(id: Long, content: String, votes: BigInt)
+case class Answers(id: Long, content: String, votes: BigInt, questionID: BigInt)
 
 object Answer {
   // creates the table in the database
@@ -16,7 +16,7 @@ object Answer {
   }
   
   val insertStmt = "INSERT INTO answers (content, votes) VALUES ({content}, {votes})"
-  def addAnswers(content: String, votes: BigInt) {
+  def addAnswers(content: String, votes: BigInt, questionID: BigInt) {
     DB.withConnection { implicit c =>
       SQL(insertStmt).on('content -> content, 'votes -> votes).execute()  
     }
