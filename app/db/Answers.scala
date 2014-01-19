@@ -27,7 +27,7 @@ object Answer {
     val query = SQL(idQuery).on('id -> id)
     DB.withConnection { implicit c =>
       query().map {
-        case Row(theId: Long, content: String, votes: BigInt) => Answers(theId, content, votes)
+        case Row(theId: Long, content: String, votes: BigInt, questionID: BigInt) => Answers(theId, content, votes)
       }.headOption
     }
   }
