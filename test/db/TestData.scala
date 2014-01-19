@@ -12,6 +12,7 @@ object TestData {
     if (debug) println("Starting sample application")
     db.startDevApp()
     
+    // Load Users
     if (debug) println("Creating table: users")
     Users.createTable()
     if (debug) println("Adding users...")
@@ -27,5 +28,16 @@ object TestData {
     Users.setPassword("hsolo01", "chewie")
     Users.setPassword("lorgana01", "alderaan")
     Users.setPassword("c3po", "r2d2")
+
+    // Load Polls
+    if (debug) println("Creating table: polls")
+    Polls.createTable()
+    if (debug) println("Adding polls...")
+    if (debug) println("  ")
+    Polls.addPoll("", "", "")
+  }
+
+  def testPolls() {
+
   }
 }
